@@ -1,0 +1,168 @@
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
+<!-- * * * * * * * to get started with your project! * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+<div class="container app">
+  <table>
+    <td style="width: 25%;">
+      <div class="row"> 
+        <div class="col-sm-8">
+          <h1 class="text-center">
+            {{title}}
+          </h1>
+        </div>
+        <div class="col-sm-4">
+          <div class="alert alert-success alert-dismissable" *ngIf="msg">
+            <a href="#" class="close" (click)="closeAlert()">
+              &times;
+            </a>
+            {{msg}}
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-4">
+          <img width="50%" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOS4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCAyNTAgMjUwIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyNTAgMjUwOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPg0KCS5zdDB7ZmlsbDojREQwMDMxO30NCgkuc3Qxe2ZpbGw6I0MzMDAyRjt9DQoJLnN0MntmaWxsOiNGRkZGRkY7fQ0KPC9zdHlsZT4NCjxnPg0KCTxwb2x5Z29uIGNsYXNzPSJzdDAiIHBvaW50cz0iMTI1LDMwIDEyNSwzMCAxMjUsMzAgMzEuOSw2My4yIDQ2LjEsMTg2LjMgMTI1LDIzMCAxMjUsMjMwIDEyNSwyMzAgMjAzLjksMTg2LjMgMjE4LjEsNjMuMiAJIi8+DQoJPHBvbHlnb24gY2xhc3M9InN0MSIgcG9pbnRzPSIxMjUsMzAgMTI1LDUyLjIgMTI1LDUyLjEgMTI1LDE1My40IDEyNSwxNTMuNCAxMjUsMjMwIDEyNSwyMzAgMjAzLjksMTg2LjMgMjE4LjEsNjMuMiAxMjUsMzAgCSIvPg0KCTxwYXRoIGNsYXNzPSJzdDIiIGQ9Ik0xMjUsNTIuMUw2Ni44LDE4Mi42aDBoMjEuN2gwbDExLjctMjkuMmg0OS40bDExLjcsMjkuMmgwaDIxLjdoMEwxMjUsNTIuMUwxMjUsNTIuMUwxMjUsNTIuMUwxMjUsNTIuMQ0KCQlMMTI1LDUyLjF6IE0xNDIsMTM1LjRIMTA4bDE3LTQwLjlMMTQyLDEzNS40eiIvPg0KPC9nPg0KPC9zdmc+DQo=" />
+        </div>
+      </div>
+    </td>
+    <td style="width: 25%;">
+      <div class="row">
+        <div class="col-sm-8">
+          <h2>Añadir un coche:</h2>
+          <form class="form-horizontal">
+            <div class="form-group">
+              <label for="name" class="control-label col-sm-2">
+                Nombre
+              </label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="name"
+                  name="name" [(ngModel)]="model.name"
+                  placeholder="Introduce el nombre"
+                >
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="position" class="control-label col-sm-2">
+                Marca
+              </label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="name"
+                  name="marca" [(ngModel)]="model.marca"
+                  placeholder="Introduce la marca"
+                >
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="color" class="control-label col-sm-2">
+                Color
+              </label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="color"
+                  name="color" [(ngModel)]="model.color"
+                  placeholder="Introduce el color"
+                >
+              </div>
+            </div>
+    
+            <div class="form-group">
+              <div class="col-sm-10 col-sm-offset-2">
+                <button type="submit" class="btn btn-success" (click)="addCar()">
+                  Añadir
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </td>
+    <td style="width: 25%;">
+      <div class="row">
+        <div class="col-sm-8">
+          <h2>Concesionario: </h2>
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>Nombre</th>
+                <th>Marca</th>
+                <th>Color</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let car of cars; let i = index">
+                <td>{{car.name}}</td>
+                <td>{{car.marca}}</td>
+                <td>{{car.color}}</td>
+                <td>
+                  <button (click)="editCar(i)" class="btn btn-success">
+                    Editar
+                  </button>
+                  <button (click)="deleteCar(i)" class="btn btn-danger">
+                    Borrar
+                  </button>
+                </td>
+              </tr>
+    
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </td>
+    <td style="padding-left: 10%;">
+      <div class="row">
+        <div class="col-sm-4" [hidden]="hideUpdate">
+          <h2>Actualizar coche:</h2>
+          <form class="form-horizontal">
+            <div class="form-group">
+              <label for="name" class="control-label col-sm-2">
+                Nombre
+              </label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="name"
+                  name="name" [(ngModel)]="model2.name"
+                  placeholder="Introduce el nuevo nombre"
+                >
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="position" class="control-label col-sm-2">
+                Marca
+              </label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="name"
+                  name="marca" [(ngModel)]="model2.marca"
+                  placeholder="Introduce la nueva marca"
+                >
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email" class="control-label col-sm-2">
+                Color
+              </label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="color"
+                  name="color" [(ngModel)]="model2.color"
+                  placeholder="Introduce el nuevo color"
+                >
+              </div>
+            </div>
+    
+            <div class="form-group">
+              <div class="col-sm-10 col-sm-offset-2">
+                <button type="submit" class="btn btn-success" (click)="updateCar()">
+                  Actualizar
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </td>
+  </table>
+</div>
